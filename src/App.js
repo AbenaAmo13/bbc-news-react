@@ -2,9 +2,11 @@
 import './App.css';
 import React, { Component } from 'react';
 import data from "./data/article-1.json";
+import {Card} from "react-bootstrap";
+import Article1 from './article1'
 const title = data.title;
 
-const body = data.body
+
 
 function App() {
   return (
@@ -12,7 +14,12 @@ function App() {
       <header className="App-header">
           <h3> BBC News Article</h3>
       </header>
-        {title}
+
+                <div>
+                <Article1></Article1>
+                </div>
+
+
     </div>
   );
 }
