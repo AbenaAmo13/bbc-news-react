@@ -6,6 +6,8 @@ const title = data.title;
 
 const body = data.body
 
+
+
 class Article1 extends Component{
     render(){
         return(
@@ -15,6 +17,18 @@ class Article1 extends Component{
                         <Card.Title>
                             {title}
                         </Card.Title>
+                        {body.map((bodyDetail, key)=>{
+                        return (
+                            <div key={key}>
+                            {
+                                bodyDetail.type +
+                                    bodyDetail.model
+
+                            }
+                        </div>
+
+                        );
+                    })}
                     </Card.Body>
                 </Card>
 
