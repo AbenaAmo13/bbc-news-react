@@ -5,6 +5,10 @@ import {Card} from "react-bootstrap";
 const title = data.title;
 
 const body = data.body
+const bodyModel = body.map((bodyModelDetails, key)=>{
+    return(
+            bodyModelDetails.model
+    )})
 
 
 
@@ -21,14 +25,27 @@ class Article1 extends Component{
                         return (
                             <div key={key}>
                             {
-                                bodyDetail.type +
-                                    bodyDetail.model
-
+                                bodyDetail.type
                             }
                         </div>
 
                         );
                     })}
+                        {bodyModel.map((bodyDetail, key)=>{
+                            return(
+                                <div key={key}>
+                                    {
+                                        bodyDetail.text +
+                                        bodyDetail.url
+
+                                    }
+                                </div>
+
+                            );
+
+                            })}
+
+
                     </Card.Body>
                 </Card>
 
