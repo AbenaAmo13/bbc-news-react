@@ -13,6 +13,7 @@ const bodyModel = body.map((bodyModelDetails, key)=>{
 
 
 
+
 class Article1 extends Component{
     render(){
         return(
@@ -24,9 +25,9 @@ class Article1 extends Component{
                         </Card.Title>
                         {body.map((bodyDetail, key)=>{
                         return (
-                            <div key={key}>
+                            <div key={0}>
                             {
-                                bodyDetail.type.values
+                                bodyDetail.type
                             }
                                 {bodyModel.map((bodyDetail, key)=>{
                                     return(
@@ -43,6 +44,11 @@ class Article1 extends Component{
 
                         );
                     })}
+                       <div>
+                           {body[5].type}
+                           {bodyModel[5].type}
+                       </div>
+
 
 
 
