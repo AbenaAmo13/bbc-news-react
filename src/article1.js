@@ -24,7 +24,7 @@ class Article1 extends Component{
                         <Card.Title>
                             {title}
                         </Card.Title>
-                    <CardImg src={bodyModel[2].url}/>
+                    <CardImg src={bodyModel[2].url} height={bodyModel[2].height} width={bodyModel[2].width}/>
                        <div>
 
                        </div>
