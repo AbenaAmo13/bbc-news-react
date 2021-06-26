@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import data from "./data/article-1.json";
-import {Card, CardImg} from "react-bootstrap";
-import image from './image.jpg'
+import {Card, CardDeck, CardImg} from "react-bootstrap";
+
+
 
 const title = data.title;
 
@@ -20,11 +21,25 @@ class Article1 extends Component{
         return(
             <div>
                 <Card>
+                    <CardImg src={bodyModel[2].url} height={bodyModel[2].height} width={bodyModel[2].width}/>
                     <Card.Body>
                         <Card.Title>
                             {title}
                         </Card.Title>
-                    <CardImg src={bodyModel[2].url} height={bodyModel[2].height} width={bodyModel[2].width}/>
+                    <Card.Header>
+                        {bodyModel[0].text}
+                    </Card.Header>
+                        <Card.Text>
+                            <p>
+                                {bodyModel[1].text}
+                            </p>
+                            <p>
+                                {bodyModel[3].text}
+                            </p>
+
+                        </Card.Text>
+
+
                        <div>
 
                        </div>
