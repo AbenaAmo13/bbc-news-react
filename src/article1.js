@@ -27,7 +27,10 @@ class Article1 extends Component{
                             {title}
                         </Card.Title>
                     <Card.Header>
-                        {bodyModel[0].text}
+                        <i>
+                            {bodyModel[0].text}
+                        </i>
+
                     </Card.Header>
                         <Card.Text>
                             <p>
@@ -36,6 +39,20 @@ class Article1 extends Component{
                             <p>
                                 {bodyModel[3].text}
                             </p>
+                            <p>
+                                {bodyModel[4].text}
+                            </p>
+                            <p>
+                                <li>
+                                    {bodyModel[5].items[0]}
+                                </li>
+                                <li>
+                                    {bodyModel[5].items[1]}
+                                </li>
+
+
+                            </p>
+
 
                         </Card.Text>
 
