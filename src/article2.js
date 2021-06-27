@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import article2data from "./data/article-2.json";
 /* Import card so you will be able to use the card component*/
-import {Card, CardDeck, CardImg} from "react-bootstrap";
+import {Button, Card, CardDeck, CardImg} from "react-bootstrap";
 /*Get the title key from the json file and put it in a const named title*/
 const title = article2data.title;
 
@@ -15,6 +15,8 @@ const bodyModel = body.map((bodyModelDetails, key)=>{
     return(
             bodyModelDetails.model
     )})
+
+
 
 class Article2 extends Component{
     render(){
@@ -60,6 +62,12 @@ class Article2 extends Component{
                        <div>
                        </div>
                     </Card.Body>
+                    <Card.Footer>
+                     <div>
+                         <Button>Ratings</Button>
+                     </div>
+
+                    </Card.Footer>
                 </Card>
 
             </div>

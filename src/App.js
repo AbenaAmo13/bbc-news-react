@@ -7,6 +7,7 @@ import Article1 from './article1'
 import Article2 from './article2'
 import Article3 from './article3'
 import AllArticles from './allarticles'
+import ControlledAllArticles from "./functionallarticles";
 import logo from'./logo.PNG'
 
 
@@ -29,7 +30,7 @@ function App() {
 
         </div>
                 <div>
-                    <AllArticles></AllArticles>
+                    <ControlledAllArticles></ControlledAllArticles>
                 </div>
 
 

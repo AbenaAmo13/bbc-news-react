@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 
 /* Import card so you will be able to use the card component*/
 import {Card, CardDeck, CardImg, Carousel, CarouselItem} from "react-bootstrap";
+
 
 /* Import the first article into the carousel*/
 import Article1 from './article1'
@@ -12,8 +13,12 @@ import Article5 from "./article5";
 
 
 
-class AllArticles extends Component{
-    render(){
+function ControlledAllArticles(){
+    const [index, setIndex] = useState(0);
+
+    const handleSelect = (selectedIndex, e) => {
+        setIndex(selectedIndex);
+    };
         return(
             <Carousel>
                 {/* Display the first article in a carousel/slide*/}
@@ -39,6 +44,6 @@ class AllArticles extends Component{
 
             );
     }
-}
 
-export default AllArticles;
+
+export default ControlledAllArticles;
