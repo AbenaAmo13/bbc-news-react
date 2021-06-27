@@ -13,13 +13,19 @@ class AllArticles extends Component{
     render(){
         return(
             <Carousel>
+                {/* Display the first article in a carousel/slide*/}
                 <CarouselItem>
                     <Article1></Article1>
                 </CarouselItem>
+                {/* Display the second article in a carousel/slide*/}
                 <CarouselItem>
                 <Article2></Article2>
                 </CarouselItem>
-            <Article3></Article3>
+                {/* Display the third article in a carousel/slide*/}
+                <CarouselItem>
+                    <Article3></Article3>
+                </CarouselItem>
+
             </Carousel>
 
             );
