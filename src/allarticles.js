@@ -8,6 +8,7 @@ import Article1 from './article1'
 import Article2 from "./article2";
 import Article3 from "./article3"
 import Article4 from "./article4"
+import Article5 from "./article5";
 
 
 class AllArticles extends Component{
@@ -28,6 +29,9 @@ class AllArticles extends Component{
                 </CarouselItem>
                 <CarouselItem>
                     <Article4></Article4>
+                </CarouselItem>
+                <CarouselItem>
+                    <Article5></Article5>
                 </CarouselItem>
 
             </Carousel>
