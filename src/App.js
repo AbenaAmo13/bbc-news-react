@@ -30,7 +30,7 @@ function App() {
 
         </div>
                 <div>
-                    <ControlledAllArticles></ControlledAllArticles>
+                    <AllArticles></AllArticles>
                 </div>
 
 
