@@ -6,7 +6,7 @@ import {Card, CardDeck, CardImg, Carousel, CarouselItem} from "react-bootstrap";
 /* Import the first article into the carousel*/
 import Article1 from './article1'
 import Article2 from "./article2";
-
+import Article3 from "./article3"
 
 
 class AllArticles extends Component{
@@ -19,8 +19,7 @@ class AllArticles extends Component{
                 <CarouselItem>
                 <Article2></Article2>
                 </CarouselItem>
-
-
+            <Article3></Article3>
             </Carousel>
 
             );

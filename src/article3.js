@@ -16,7 +16,7 @@ const bodyModel = body.map((bodyModelDetails, key)=>{
             bodyModelDetails.model
     )})
 
-class Article2 extends Component{
+class Article3 extends Component{
     render(){
         return(
             <div>
@@ -72,4 +72,4 @@ class Article2 extends Component{
     }
 }
 
-export default Article2;
+export default Article3;
