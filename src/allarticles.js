@@ -7,6 +7,7 @@ import {Card, CardDeck, CardImg, Carousel, CarouselItem} from "react-bootstrap";
 import Article1 from './article1'
 import Article2 from "./article2";
 import Article3 from "./article3"
+import Article4 from "./article4"
 
 
 class AllArticles extends Component{
@@ -24,6 +25,9 @@ class AllArticles extends Component{
                 {/* Display the third article in a carousel/slide*/}
                 <CarouselItem>
                     <Article3></Article3>
+                </CarouselItem>
+                <CarouselItem>
+                    <Article4></Article4>
                 </CarouselItem>
 
             </Carousel>
