@@ -3,15 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-import article1 from './article1';
-
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
       <App/>
-  <article1/>
+
+
 
 
   </React.StrictMode>,

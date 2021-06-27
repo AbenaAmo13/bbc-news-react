@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import data from "./data/article-1.json";
 import {Card} from "react-bootstrap";
 import Article1 from './article1'
+import Article2 from './article2'
 const title = data.title;
 
 
@@ -17,6 +18,9 @@ function App() {
 
                 <div>
                 <Article1></Article1>
+                </div>
+                <div className="mt-4">
+                    <Article2></Article2>
                 </div>
 
 
