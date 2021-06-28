@@ -4,7 +4,8 @@ import data from "./data/article-1.json";
 /* Import card so you will be able to use the card component*/
 import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import { Card, CardActionArea, CardActions, CardContent, CardMedia, Typography, Button} from '@material-ui/core';
+import Rating from '@material-ui/lab/Rating';
+import { Card, CardActionArea, CardActions, CardContent, CardMedia, Typography, Button,Box} from '@material-ui/core';
 import {CardImg} from "react-bootstrap";
 import DisplayArticles from "./displayArticles";
 /*get the title key from the json file and put it in a const named title*/
@@ -39,8 +40,10 @@ const useStyles = makeStyles({
 });
 export default function MediaCard() {
     const classes = useStyles();
+    const [value, setValue] = React.useState(2);
 
-        return(
+
+    return(
                         <Card  className={classes.Cardroot} >
                             <CardActionArea >
                                 <CardMedia className={classes.media}
@@ -86,9 +89,15 @@ export default function MediaCard() {
                                 <Button size="small" color="primary">
                                     Share
                                 </Button>
-                                <Button size="small" color="primary">
-                                    Learn More
-                                </Button>
+                                <Box component="fieldset" mb={3} borderColor="transparent">
+                                    <Rating
+                                        name="simple-controlled"
+                                        value={value}
+                                        onChange={(event, newValue) => {
+                                            setValue(newValue);
+                                        }}
+                                    />
+                                </Box>
                             </CardActions>
 
                         </Card>

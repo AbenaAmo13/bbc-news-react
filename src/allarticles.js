@@ -71,7 +71,11 @@ const useStyles = makeStyles((theme) => ({
     },
     tabs: {
         borderRight: `1px solid ${theme.palette.divider}`,
+
     },
+    divider:{
+
+    }
 }));
 export default  function AllArticles() {
     const classes = useStyles();

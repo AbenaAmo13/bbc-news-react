@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Typography} from "@material-ui/core";
+import {Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Typography, } from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 import classes from "*.module.css";
 /* import the article 2 json file as data to be able to get the information from it */
