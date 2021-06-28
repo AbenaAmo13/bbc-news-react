@@ -1,20 +1,31 @@
 import React, { Component } from 'react';
 
+import { createMuiTheme } from '@material-ui/core/styles';
+import blue from '@material-ui/core/colors/blue';
+
+
 /* Import card so you will be able to use the card component*/
 import {Card, CardDeck, CardImg, Carousel, CarouselItem} from "react-bootstrap";
 
 /* Import the first article into the carousel*/
-import Article1 from './article1'
-import Article2 from "./article2";
-import Article3 from "./article3"
-import Article4 from "./article4"
-import Article5 from "./article5";
-import MediaCard from "./testArticle";
+
+
+
+import MediaCard from "./article-1";
+import data from "./data/article-1.json";
+import article2 from "./data/article-2.json";
+import article3 from "./data/article-3.json";
+import article4 from "./data/article-4.json";
+import article5 from "./data/article-5.json";
+
 import {Box, Grid, Typography, Tabs, Tab} from "@material-ui/core";
 
 import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from "prop-types";
-
+import MediaCard2 from "./article-2";
+import MediaCard3 from "./article-3";
+import MediaCard4 from "./article-4";
+import MediaCard5 from "./article-4";
 
 
 
@@ -53,7 +64,6 @@ function a11yProps(index) {
 
 
 
-
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow : 1,
@@ -84,11 +94,11 @@ export default  function AllArticles() {
                             aria-label="Vertical tabs example"
                             className={classes.tabs}
                         >
-                            <Tab label="Item One" {...a11yProps(0)} />
-                            <Tab label="Item Two" {...a11yProps(1)} />
-                            <Tab label="Item Three" {...a11yProps(2)} />
-                            <Tab label="Item Four" {...a11yProps(3)} />
-                            <Tab label="Item Five" {...a11yProps(4)} />
+                            <Tab label={data.title} {...a11yProps(0)} />
+                            <Tab label={article2.title} {...a11yProps(1)} />
+                            <Tab label={article3.title} {...a11yProps(2)} />
+                            <Tab label={article4.title} {...a11yProps(3)} />
+                            <Tab label={article5.title} {...a11yProps(4)} />
 
                         </Tabs>
                     </Grid>
@@ -97,16 +107,16 @@ export default  function AllArticles() {
                             <MediaCard></MediaCard>
                         </TabPanel>
                         <TabPanel value={value} index={1}>
-                            Item Two
+                            <MediaCard2></MediaCard2>
                         </TabPanel>
                         <TabPanel value={value} index={2}>
-                            Item Three
+                            <MediaCard3></MediaCard3>
                         </TabPanel>
                         <TabPanel value={value} index={3}>
-                            Item Four
+                            <MediaCard4></MediaCard4>
                         </TabPanel>
                         <TabPanel value={value} index={4}>
-                            Item Five
+                            <MediaCard5></MediaCard5>
                         </TabPanel>
 
 

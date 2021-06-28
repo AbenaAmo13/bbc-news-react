@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 /* import the article 1 json file as data to be able to get the information from it */
-import data from "./data/article-1.json";
+import data from "./data/article-2.json";
 /* Import card so you will be able to use the card component*/
 import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import { Card, CardActionArea, CardActions, CardContent, CardMedia, Typography, Button} from '@material-ui/core';
 import {CardImg} from "react-bootstrap";
+import DisplayArticles from "./displayArticles";
 /*get the title key from the json file and put it in a const named title*/
 const title = data.title;
 
@@ -22,8 +23,6 @@ const bodyModel = body.map((bodyModelDetails, key)=>{
 
 
 
-
-
 const useStyles = makeStyles({
     Cardroot: {
         maxWidth: parseInt(bodyModel[2].width),
@@ -31,12 +30,12 @@ const useStyles = makeStyles({
 
     },
     media: {
-       height: parseInt(bodyModel[2].height),
-        width: parseInt(bodyModel[2].width),
+       height: parseInt(bodyModel[1].height),
+        width: parseInt(bodyModel[1].width),
 
     },
 });
-export default function MediaCard() {
+export default function MediaCard2() {
     const classes = useStyles();
 
         return(
@@ -45,8 +44,9 @@ export default function MediaCard() {
                                 <CardMedia className={classes.media}
 
                                     /* Get the image from the json article file and render it, with the appropriate height and width. */
-                                           image = {bodyModel[2].url}
+                                           image = {bodyModel[1].url}
                                 />
+
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="h2">
                                         {title}
@@ -57,28 +57,24 @@ export default function MediaCard() {
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p">
                                         {/* Render the paragraphs from the article-json file*/}
-                                        {bodyModel[1].text}
-                                    </Typography>
+                                        {bodyModel[2].text}                                    </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p">
 
                                         {bodyModel[3].text}
+                                    </Typography>
 
+                                        <CardMedia className={classes.media}
+                                            image = {bodyModel[4].url}
+                                        />
+                                    <Typography variant="body2" color="textSecondary" component="p">
+                                        {bodyModel[5].text}
+                                    </Typography>
+                                    <CardMedia className={classes.media} image={bodyModel[6].url}/>
 
-                                        {bodyModel[4].text}
-
-                                        <ul>
-                                            {/* Render the list items in the article-.json file*/}
-                                            <li>
-                                                {bodyModel[5].items[0]}
-                                            </li>
-                                            <li>
-                                                {bodyModel[5].items[1]}
-                                            </li>
-                                        </ul>
-
+                                    <Typography variant="body2" color="textSecondary" component="p">
+                                        {bodyModel[7].text}
                                     </Typography>
                                 </CardContent>
-
                             </CardActionArea>
                             <CardActions>
                                 <Button size="small" color="primary">
