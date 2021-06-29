@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 /* import the article 1 json file as data to be able to get the information from it */
 import data from "./data/article-1.json";
 /* Import card so you will be able to use the card component*/
@@ -8,6 +8,7 @@ import Rating from '@material-ui/lab/Rating';
 import { Card, CardActionArea, CardActions, CardContent, CardMedia, Typography, Button,Box} from '@material-ui/core';
 import {CardImg} from "react-bootstrap";
 import DisplayArticles from "./displayArticles";
+import RatingsForm from "./ratingsForm";
 /*get the title key from the json file and put it in a const named title*/
 const title = data.title;
 
@@ -70,18 +71,17 @@ export default function MediaCard() {
 
                                         {bodyModel[4].text}
 
-                                        <ul>
-                                            {/* Render the list items in the article-.json file*/}
-                                            <li>
-                                                {bodyModel[5].items[0]}
-                                            </li>
-                                            <li>
-                                                {bodyModel[5].items[1]}
-                                            </li>
-                                        </ul>
-
-
                                     </Typography>
+
+                                    <ul>
+                                        {/* Render the list items in the article-.json file*/}
+                                        <li>
+                                            {bodyModel[5].items[0]}
+                                        </li>
+                                        <li>
+                                            {bodyModel[5].items[1]}
+                                        </li>
+                                    </ul>
                                 </CardContent>
 
                             </CardActionArea>
@@ -89,7 +89,7 @@ export default function MediaCard() {
                                 <Button size="small" color="primary">
                                     Share
                                 </Button>
-                                <Box component="fieldset" mb={3} borderColor="transparent">
+                                {/*<Box component="fieldset" mb={3} borderColor="transparent">
                                     <Rating
                                         name="simple-controlled"
                                         value={value}
@@ -97,7 +97,8 @@ export default function MediaCard() {
                                             setValue(newValue);
                                         }}
                                     />
-                                </Box>
+                                </Box>*/}
+                                <RatingsForm></RatingsForm>
                             </CardActions>
 
                         </Card>
